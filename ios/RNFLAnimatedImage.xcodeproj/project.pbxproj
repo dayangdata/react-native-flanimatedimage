@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317809091FF22C7B00B87BD8 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317809071FF22C4F00B87BD8 /* FLAnimatedImage.framework */; };
 		B5EE7B901D884FA5008938BC /* RNFLAnimatedImage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5EE7B8F1D884FA5008938BC /* RNFLAnimatedImage.h */; };
 		B5EE7B921D884FA5008938BC /* RNFLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EE7B911D884FA5008938BC /* RNFLAnimatedImage.m */; };
 		B5EE7B9A1D885034008938BC /* RNFLAnimatedImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EE7B991D885034008938BC /* RNFLAnimatedImageManager.m */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		317809071FF22C4F00B87BD8 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = RNFLAnimatedImage/Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
 		B5EE7B8C1D884FA5008938BC /* libRNFLAnimatedImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFLAnimatedImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EE7B8F1D884FA5008938BC /* RNFLAnimatedImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNFLAnimatedImage.h; sourceTree = "<group>"; };
 		B5EE7B911D884FA5008938BC /* RNFLAnimatedImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNFLAnimatedImage.m; sourceTree = "<group>"; };
@@ -38,17 +40,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317809091FF22C7B00B87BD8 /* FLAnimatedImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		317809061FF22C4F00B87BD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				317809071FF22C4F00B87BD8 /* FLAnimatedImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5EE7B831D884FA5008938BC = {
 			isa = PBXGroup;
 			children = (
 				B5EE7B8E1D884FA5008938BC /* RNFLAnimatedImage */,
 				B5EE7B8D1D884FA5008938BC /* Products */,
+				317809061FF22C4F00B87BD8 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -220,6 +232,10 @@
 		B5EE7B961D884FA5008938BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RNFLAnimatedImage/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -238,6 +254,10 @@
 		B5EE7B971D884FA5008938BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RNFLAnimatedImage/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -272,6 +292,7 @@
 				B5EE7B971D884FA5008938BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

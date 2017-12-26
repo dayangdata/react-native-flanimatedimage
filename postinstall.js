@@ -21,7 +21,7 @@ if (process.platform === 'darwin' && shouldUseCarthage()) {
     )
   }
 
-  const rnFlanimatedImageDirectory = __dirname + '/RNFLAnimatedImage/RNFLAnimatedImage'
+  const rnFlanimatedImageDirectory = __dirname + '/ios/RNFLAnimatedImage'
   try {
     process.chdir(rnFlanimatedImageDirectory)
   } catch (err) {
