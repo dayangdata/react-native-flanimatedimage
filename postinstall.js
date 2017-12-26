@@ -37,9 +37,9 @@ if (process.platform === 'darwin' && shouldUseCarthage()) {
 }
 
 function shouldUseCarthage() {
-  const reactNativeBlePlxOptions = parentModulePackageJson && parentModulePackageJson['react-native-flanimatedimage']
-  if (!reactNativeBlePlxOptions) return true
-  const useCarthage = reactNativeBlePlxOptions.carthage
+  const moduleOptions = parentModulePackageJson && parentModulePackageJson['react-native-flanimatedimage']
+  if (!moduleOptions) return true
+  const useCarthage = moduleOptions.carthage
   return useCarthage != undefined ? useCarthage : true
 }
 
