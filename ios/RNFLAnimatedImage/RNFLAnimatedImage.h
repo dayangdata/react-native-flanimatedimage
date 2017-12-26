@@ -7,7 +7,6 @@
 //
 
 #import <React/RCTView.h>
-#import "FLAnimatedImage.h"
 
 @class RNFLAnimatedImage;
 

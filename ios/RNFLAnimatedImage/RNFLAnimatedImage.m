@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <ImageIO/ImageIO.h>
 
-#import "FLAnimatedImage.h"
+@import FLAnimatedImage;
 #import "RNFLAnimatedImage.h"
 
 #import <React/RCTBridgeModule.h>
