@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		317809091FF22C7B00B87BD8 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317809071FF22C4F00B87BD8 /* FLAnimatedImage.framework */; };
-		B5EE7B901D884FA5008938BC /* RNFLAnimatedImage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5EE7B8F1D884FA5008938BC /* RNFLAnimatedImage.h */; };
+		31578DE820B57C6F005EBA06 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31578DE620B57C6F005EBA06 /* FLAnimatedImage.m */; };
+		31578DE920B57C6F005EBA06 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31578DE720B57C6F005EBA06 /* FLAnimatedImageView.m */; };
 		B5EE7B921D884FA5008938BC /* RNFLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EE7B911D884FA5008938BC /* RNFLAnimatedImage.m */; };
 		B5EE7B9A1D885034008938BC /* RNFLAnimatedImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EE7B991D885034008938BC /* RNFLAnimatedImageManager.m */; };
 /* End PBXBuildFile section */
@@ -20,13 +20,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B5EE7B901D884FA5008938BC /* RNFLAnimatedImage.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31578DE420B57C6F005EBA06 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		31578DE520B57C6F005EBA06 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		31578DE620B57C6F005EBA06 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		31578DE720B57C6F005EBA06 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		317809071FF22C4F00B87BD8 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLAnimatedImage.framework; path = RNFLAnimatedImage/Carthage/Build/iOS/FLAnimatedImage.framework; sourceTree = "<group>"; };
 		B5EE7B8C1D884FA5008938BC /* libRNFLAnimatedImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFLAnimatedImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EE7B8F1D884FA5008938BC /* RNFLAnimatedImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNFLAnimatedImage.h; sourceTree = "<group>"; };
@@ -40,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				317809091FF22C7B00B87BD8 /* FLAnimatedImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,10 @@
 		B5EE7B8E1D884FA5008938BC /* RNFLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
+				31578DE520B57C6F005EBA06 /* FLAnimatedImage.h */,
+				31578DE620B57C6F005EBA06 /* FLAnimatedImage.m */,
+				31578DE420B57C6F005EBA06 /* FLAnimatedImageView.h */,
+				31578DE720B57C6F005EBA06 /* FLAnimatedImageView.m */,
 				B5EE7B8F1D884FA5008938BC /* RNFLAnimatedImage.h */,
 				B5EE7B911D884FA5008938BC /* RNFLAnimatedImage.m */,
 				B5EE7B981D885026008938BC /* RNFLAnimatedImageManager.h */,
@@ -143,6 +149,8 @@
 			files = (
 				B5EE7B9A1D885034008938BC /* RNFLAnimatedImageManager.m in Sources */,
 				B5EE7B921D884FA5008938BC /* RNFLAnimatedImage.m in Sources */,
+				31578DE820B57C6F005EBA06 /* FLAnimatedImage.m in Sources */,
+				31578DE920B57C6F005EBA06 /* FLAnimatedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,18 +240,13 @@
 		B5EE7B961D884FA5008938BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RNFLAnimatedImage/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../react-native/Libraries/Image/**",
-					"$(SRCROOT)/../../../ios/Carthage/Build/iOS/FLAnimatedImage.framework/Headers",
-					"$(SRCROOT)/../../../ios/Pods/Headers/Public/FLAnimatedImage",
-					"$(SRCROOT)/../../../ios/Pods/FLAnimatedImage/FLAnimatedImage",
+					"$(SRCROOT)/../../../node_modules/react-native/Libraries/Image",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -254,18 +257,13 @@
 		B5EE7B971D884FA5008938BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RNFLAnimatedImage/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../react-native/Libraries/Image/**",
-					"$(SRCROOT)/../../../ios/Carthage/Build/iOS/FLAnimatedImage.framework/Headers",
-					"$(SRCROOT)/../../../ios/Pods/Headers/Public/FLAnimatedImage",
-					"$(SRCROOT)/../../../ios/Pods/FLAnimatedImage/FLAnimatedImage",
+					"$(SRCROOT)/../../../node_modules/react-native/Libraries/Image",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
